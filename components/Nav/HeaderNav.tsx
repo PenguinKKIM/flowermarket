@@ -19,8 +19,8 @@ function HeaderNav() {
         </Link>
       </div>
       <div className={linkConatinerStyle()}>
-        <Link href="/main">로그인</Link>
-        <Link href="/main">회원가입</Link>
+        <Link href="/login">로그인</Link>
+        <Link href="/join">회원가입</Link>
       </div>
     </nav>
   );
