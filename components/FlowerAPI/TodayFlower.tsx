@@ -47,7 +47,7 @@ const TodayFlower = async () => {
   } catch (error) {
     return (
       <div>
-        <h1>Error fetching data</h1>
+        <h1>Error fetching data{`${error}`}</h1>
       </div>
     );
   }
