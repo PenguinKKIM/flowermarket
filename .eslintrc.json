@@ -22,6 +22,14 @@
         "extensions": [".tsx"]
       }
     ],
-    "@typescript-eslint/explicit-module-boundary-types": "off"
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "semi": ["error", "always"],
+    "quotes": ["error", "single"],
+    "react/require-default-props": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/button-has-type": "off",
+    "react/jsx-no-useless-fragment": "off",
+    "react/function-component-definition": "off",
+    "import/prefer-default-export": "off"
   }
 }
