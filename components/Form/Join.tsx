@@ -1,43 +1,55 @@
-import { inputStyle, labelStyle } from './InputCVA';
+'use client';
+import { useFormState } from 'react-dom';
+import FormButton from './FormButton';
+import FormInput from './FormInput';
+import { formSectionStyle, formStyle } from './InputCVA';
+import handelJoinForm from './HandleJoinForm';
 
 function Join() {
+  const [state, dispatch] = useFormState(handelJoinForm, null);
   return (
-    <form className="w-1/2 flex flex-col gap-5">
-      <label htmlFor="nickname" className={labelStyle()}>
-        닉네임
-        <input
+    <section className={formSectionStyle()}>
+      <h1>회원가입</h1>
+      <form action={dispatch} className={formStyle()}>
+        <FormInput
+          labelName="닉네임"
           type="text"
-          name="nickname"
-          id="nickname"
-          className={inputStyle()}
+          name="name"
+          id="name"
+          placeholder="닉네임을 입력해주세요"
+          required={false}
+          error={state?.fieldErrors.name}
         />
-      </label>
-      <label htmlFor="email" className={labelStyle()}>
-        이메일 className={inputStyle()}
-        <input type="text" name="email" id="email" className={inputStyle()} />
-      </label>
-      <label htmlFor="password" className="flex flex-col">
-        비밀번호
-        <input
-          type="text"
+        <FormInput
+          labelName="이메일"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="이메일을 입력해주세요"
+          required={false}
+          error={state?.fieldErrors.email}
+        />
+        <FormInput
+          labelName="비밀번호"
+          type="password"
           name="password"
           id="password"
-          className="bg-slate-100"
+          placeholder="비밀번호를을 입력해주세요"
+          required={false}
+          error={state?.fieldErrors.password}
         />
-      </label>
-      <label htmlFor="passwordCheck" className={labelStyle()}>
-        비밀번호 확인
-        <input
-          type="text"
+        <FormInput
+          labelName="비밀번호 확인"
+          type="password"
           name="passwordCheck"
           id="passwordCheck"
-          className={inputStyle()}
+          placeholder="비밀번호를을 다시 입력해주세요"
+          required={false}
+          error={state?.fieldErrors.passwordCheck}
         />
-      </label>
-      <button type="submit" className="w-full bg-blue-400">
-        가입하기
-      </button>
-    </form>
+        <FormButton type="submit" text="가입하기" />
+      </form>
+    </section>
   );
 }
 
