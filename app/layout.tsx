@@ -47,7 +47,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={pretendard.className}>
+      <body className={`${pretendard.className} text-gray-950`}>
         <header className="sticky top-0">
           <HeaderNav />
         </header>
