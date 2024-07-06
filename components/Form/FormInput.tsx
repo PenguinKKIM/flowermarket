@@ -19,9 +19,10 @@ function FormInput({
     <label htmlFor={id} className={labelStyle()}>
       <span>{labelName}</span>
       <input name={name} className={inputStyle()} {...props} />
-      {error.map((error, index) => (
-        <span key={index} className="text-red-500 font-medium">
-          {error}
+      {error.map((errors, index) => (
+        // eslint-disable-next-line react/no-array-index-key
+        <span key={index} className="text-red-500 font-medium text-sm">
+          {errors}
         </span>
       ))}
     </label>

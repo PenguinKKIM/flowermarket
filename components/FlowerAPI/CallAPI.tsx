@@ -15,7 +15,7 @@ async function fetchData() {
     const json = await parseStringPromise(response.data);
     return json;
   } catch (error) {
-    throw new Error(`HTTP error! status`);
+    throw new Error('HTTP error! status');
   }
 }
 

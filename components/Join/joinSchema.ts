@@ -1,3 +1,10 @@
+import {
+  EMAIL_ERROR_MESSAGE,
+  PASSWORD_MIN_LENGTH,
+  PASSWORD_MIN_LENGTH_ERROR_MESSAGE,
+  PASSWORD_REGEX,
+  PASSWORD_REGEX_ERROR_MESSAGE,
+} from '@/lib/constant';
 import { z } from 'zod';
 
 const passwordConfirm = ({
@@ -10,10 +17,7 @@ const passwordConfirm = ({
   return password === passwordCheck;
 };
 
-const passwordRegex =
-  /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).+$/;
-
-const dataSchema = z
+const joinSchema = z
   .object({
     name: z
       .string({
@@ -23,14 +27,11 @@ const dataSchema = z
       .min(3, '닉네임은 세자리 이상이어야 합니다.')
       .max(10, '닉네임은 10자리 이하여야합니다.')
       .trim(),
-    email: z.string().email('올바른 형식의 이메일을 입력해주세요.'),
+    email: z.string().email(EMAIL_ERROR_MESSAGE),
     password: z
       .string()
-      .min(6, '비밀번호는 6자리이상이어야 합니다')
-      .regex(
-        passwordRegex,
-        '비밀번호는 소문자, 대문자, 숫자, 특수문자를 포함해야합니다.',
-      ),
+      .min(PASSWORD_MIN_LENGTH, PASSWORD_MIN_LENGTH_ERROR_MESSAGE)
+      .regex(PASSWORD_REGEX, PASSWORD_REGEX_ERROR_MESSAGE),
     passwordCheck: z.string(),
   })
   .refine(passwordConfirm, {
@@ -38,4 +39,4 @@ const dataSchema = z
     path: ['passwordCheck'],
   });
 
-export default dataSchema;
+export default joinSchema;

@@ -1,10 +1,10 @@
 'use client';
 
 import { useFormState } from 'react-dom';
-import FormButton from './FormButton';
-import FormInput from './FormInput';
+import FormButton from '../Form/FormButton';
+import FormInput from '../Form/FormInput';
+import { formSectionStyle, formStyle } from '../Form/InputCVA';
 
-import { formSectionStyle, formStyle } from './InputCVA';
 import handleLoginForm from './HandleLoginForm';
 
 function Login() {

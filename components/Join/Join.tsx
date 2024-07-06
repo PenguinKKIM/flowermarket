@@ -1,9 +1,9 @@
 'use client';
 
 import { useFormState } from 'react-dom';
-import FormButton from './FormButton';
-import FormInput from './FormInput';
-import { formSectionStyle, formStyle } from './InputCVA';
+import FormButton from '../Form/FormButton';
+import FormInput from '../Form/FormInput';
+import { formSectionStyle, formStyle } from '../Form/InputCVA';
 import handelJoinForm from './HandleJoinForm';
 
 function Join() {
@@ -37,6 +37,7 @@ function Join() {
           id="password"
           placeholder="비밀번호를을 입력해주세요"
           required={false}
+          minLength={6}
           error={state?.fieldErrors.password}
         />
         <FormInput
@@ -46,6 +47,7 @@ function Join() {
           id="passwordCheck"
           placeholder="비밀번호를을 다시 입력해주세요"
           required={false}
+          minLength={6}
           error={state?.fieldErrors.passwordCheck}
         />
         <FormButton type="submit" text="가입하기" />
