@@ -12,11 +12,11 @@ const TodayFlower = async () => {
 
     return (
       <article className="my-4">
-        <header className="bg-[url('/image/background-img/title_bg.jpg')] bg-center bg-cover h-28 ">
-          <h1 className="font-semibold text-4xl text-slate-50">{`${month}월 ${day} 일 오늘의 꽃`}</h1>
+        <header className="relative bg-[url('/image/background-img/title_bg.jpg')] bg-center bg-cover h-28 ">
+          <h1 className="absolute top-1/2 left-4 font-semibold text-4xl text-slate-50">{`${month}월 ${day} 일 오늘의 꽃`}</h1>
         </header>
         <section className="mt-8">
-          <h2>{item.flowNm[0]}</h2>
+          <h2 className="px-8 text-lg">{item.flowNm[0]}</h2>
           <div className="w-full grid grid-cols-3 gap-1 p-8">
             <Image
               src={item.imgUrl1[0]}
