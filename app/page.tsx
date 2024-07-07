@@ -1,4 +1,5 @@
 import TodayFlower from '@/components/FlowerAPI/TodayFlower';
+import '@/lib/dataBase';
 
 export default function Home() {
   return (
