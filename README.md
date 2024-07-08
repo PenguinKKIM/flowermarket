@@ -16,13 +16,13 @@ Next.js , tailwind CSS, CVA ,Zod, Prizma, Sqlite,bcrypt, iron-seccion
 
 - 회원가입 / 로그인시 Zod 를 이용해 유효성 검사를 하고 Prisma 를 이용해 만든 데이터 베이스로 닉네임/ 이메일 중복검사를 구현했습니다
 
-  ![]()
+  ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FB79Pe%2FbtsIqz0M4vg%2F1HDePeyqB9VeLuLPJrPO11%2Fimg.png)
 
 #### 💐 bcrypt 를 이용한 비밀번호 해싱
 
 - bcrypt 를 이용해서 회원 가입시 비밀번호를 해싱 하여 저장 하고 로그인시 해싱된 비밀번호를 비교하여 로그인 할수있도록 구현 하였습니다.
 
-  ![]()
+  ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbuJ5Tp%2FbtsIqDa9MPz%2FDLVOi8cQl1t1mY2EMQhUzK%2Fimg.png)
 
 #### 💐세션에 해당 유저의 쿠키 저장
 
@@ -30,13 +30,13 @@ Next.js , tailwind CSS, CVA ,Zod, Prizma, Sqlite,bcrypt, iron-seccion
 
 - Next.js 의 쿠키 받아 오는 기능을 사용해 손쉽게 구현 했습니다.
 
-  ![]()
+  ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FAdx16%2FbtsIsMEddEp%2FKFsXGc7OZy9bCCJRZxUE21%2Fimg.png)
 
 #### 💐 공공데이터 포탈에서 오늘의 꽃 불러오기
 
 - 매일 달라지는 ''오늘의 꽃'' API를 이용해 매일 달라지는 꽃을 받아오고 볼 수 있도록 했습니다.
 
-  ![]()
+  ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FLUaau%2FbtsIqUqarRJ%2FHRJiVjwOzgVdJh3rFbkDoK%2Fimg.png)
 
 
 
