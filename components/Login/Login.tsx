@@ -4,7 +4,6 @@ import { useFormState } from 'react-dom';
 import FormButton from '../Form/FormButton';
 import FormInput from '../Form/FormInput';
 import { formSectionStyle, formStyle } from '../Form/InputCVA';
-
 import handleLoginForm from './HandleLoginForm';
 
 function Login() {
@@ -31,7 +30,7 @@ function Login() {
           required={false}
           error={state?.fieldErrors.password}
         />
-        <FormButton type="submit" text="로그인" />
+        <FormButton intent="primary" type="submit" text="로그인" />
       </form>
     </section>
   );

@@ -36,6 +36,7 @@ async function handleLoginForm(prevState: any, formData: FormData) {
     return {
       fieldErrors: {
         password: ['잘못된 비밀번호입니다'],
+        email: [],
       },
     };
   }
