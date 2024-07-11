@@ -3,7 +3,7 @@
 import { cva } from 'class-variance-authority';
 import { useFormStatus } from 'react-dom';
 
-type Intent = 'primary' | 'disable';
+type Intent = 'primary' | 'secondary' | 'disable' | 'success';
 
 interface FormButtonProps extends React.ComponentPropsWithoutRef<'button'> {
   text: string;
@@ -16,7 +16,9 @@ const buttonStyleCVA = cva(
     variants: {
       intent: {
         primary: 'bg-blue-400',
+        secondary: 'bg-blue-600',
         disable: 'bg-gray-100',
+        success: 'bg-green-500',
       },
     },
   },

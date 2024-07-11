@@ -30,7 +30,7 @@ function Login() {
           required={false}
           error={state?.fieldErrors.password}
         />
-        <FormButton intent="primary" type="submit" text="로그인" />
+        <FormButton type="submit" text="로그인" />
       </form>
     </section>
   );
