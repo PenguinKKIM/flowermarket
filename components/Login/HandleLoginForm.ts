@@ -1,6 +1,6 @@
 'use server';
 
-import { redirect } from 'next/navigation';
+// import { redirect } from 'next/navigation';
 import bcrypt from 'bcrypt';
 import dataBase from '@/lib/dataBase';
 import getSeccion from '@/lib/session';
@@ -40,7 +40,6 @@ async function handleLoginForm(prevState: any, formData: FormData) {
       },
     };
   }
-  redirect('/');
 }
 
 export default handleLoginForm;

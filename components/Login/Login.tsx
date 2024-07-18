@@ -10,7 +10,7 @@ function Login() {
   const [state, dispatch] = useFormState(handleLoginForm, null);
   return (
     <section className={formSectionStyle()}>
-      <h1>로그인</h1>
+      <h1 className="text-blue-950 p-4 text-lg">로그인</h1>
       <form action={dispatch} className={formStyle()}>
         <FormInput
           labelName="이메일"

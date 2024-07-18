@@ -10,7 +10,7 @@ function Join() {
   const [state, dispatch] = useFormState(handelJoinForm, null);
   return (
     <section className={formSectionStyle()}>
-      <h1>회원가입</h1>
+      <h1 className="text-blue-950 p-4 text-lg">회원가입</h1>
       <form action={dispatch} className={formStyle()}>
         <FormInput
           labelName="닉네임"
